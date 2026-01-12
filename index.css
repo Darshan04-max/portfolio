@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.navbar a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.fade-down {
+  animation: fadeDown 1.2s ease;
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.btn {
+  margin-top: 25px;
+  padding: 14px 30px;
+  background: #ff4d4d;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.glow {
+  box-shadow: 0 0 15px #ff4d4d;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* SECTIONS */
+.section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 90px 20px;
+}
+
+/* SKILLS */
+.skills span {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 22px;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+}
+
+/* CARDS */
+.card {
+  background: rgba(255,255,255,0.12);
+  padding: 25px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  backdrop-filter: blur(15px);
+  transition: 0.4s;
+}
+
+.hover-glow:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 0 25px rgba(255,255,255,0.3);
+}
+
+/* CERTIFICATES */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.cert-card {
+  background: rgba(255,255,255,0.12);
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.4s;
+}
+
+.cert-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.cert-card:hover {
+  transform: scale(1.05);
+}
+/* PROFILE PHOTO */
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 4px solid rgba(255,255,255,0.6);
+  box-shadow: 0 0 30px rgba(255,255,255,0.4);
+  animation: float 4s ease-in-out infinite;
+}
+/* GitHub Icon */
+.github-link img {
+  width: 26px;
+  vertical-align: middle;
+  filter: invert(1);
+  transition: 0.3s;
+}
+/* GITHUB PROJECTS */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.project-card {
+  background: rgba(255,255,255,0.12);
+  border-radius: 20px;
+  padding: 25px;
+  backdrop-filter: blur(15px);
+  transition: 0.4s;
+}
+
+.project-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 0 25px rgba(255,255,255,0.35);
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 15px;
+}
+
+.project-card a {
+  color: #ff4d4d;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: 500;
+}
+
+.github-link img:hover {
+  transform: scale(1.2);
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* SKILLS WITH LOGOS */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.skill-card {
+  background: rgba(255,255,255,0.12);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  transition: 0.4s;
+}
+
+.skill-card img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+/* CERTIFICATES */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.cert-card {
+  background: rgba(255,255,255,0.12);
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.4s;
+}
+
+.cert-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.cert-card:hover {
+  transform: scale(1.05);
+}
+
+
+/* Floating Animation */
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 25px;
+  opacity: 0.7;
+}
+
+/* TYPING */
+.typing {
+  border-right: 2px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+}
